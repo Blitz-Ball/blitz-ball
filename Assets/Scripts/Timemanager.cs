@@ -10,7 +10,6 @@ public class Timemanager : MonoBehaviour
 
 
     public float timer;
-    public bool CountDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,16 +19,17 @@ public class Timemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer>0)
+        if(timer>=0)
         {
             timer-=Time.deltaTime;
+            SetTimerText(timer);
         }
         else
         {
             timer=0;
         }
 
-        SetTimerText(timer);
+        
     }
     private void SetTimerText(float timetoDisplay)
     {

@@ -21,7 +21,7 @@ public class Player1 : MonoBehaviour
     public void RestartPlayer()
     {
         rb.velocity = new Vector2(0, 0);
-        transform.position = new Vector2(-7.5f, -0.345f);
+        transform.position = new Vector2(-4f, -0.345f);
     }
 
     // Update is called once per frame
@@ -35,9 +35,9 @@ public class Player1 : MonoBehaviour
         rb.velocity = new Vector2(directionX * RacketSpeed, directionY * RacketSpeed);
 
 
-        if (rb.transform.position.x >= 0)
+        if (rb.transform.position.x >= -0.85f)
         {
-            rb.transform.position = new Vector2(0, rb.transform.position.y);
+            rb.transform.position = new Vector2(-0.85f, rb.transform.position.y);
         }
      
       

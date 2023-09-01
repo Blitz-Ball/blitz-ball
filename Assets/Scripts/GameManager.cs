@@ -16,9 +16,11 @@ public class BallMovement : MonoBehaviour
     public Rigidbody2D p2;
     public Rigidbody2D p3;
     public Rigidbody2D p4;
+    float ballSpeed;
 
 
     private int hitCounter = 0;
+    private float r, b;
     
 
     // Start is called before the first frame update
@@ -29,14 +31,24 @@ public class BallMovement : MonoBehaviour
         StartCoroutine(Launch());
     }
 
+    void Update()
+    {
+        if(ballSpeed>6)
+        {
+            ballSpeed=5.99f;
+        }
+    }
+
     private void RestartGame()
     {
         ball.velocity = new Vector2(0, 0);
         ball.transform.position = new Vector2(0, -0.345f);
-        p1.transform.position = new Vector2(-7.5f, -0.345f);
-        p2.transform.position = new Vector2(7.5f, -0.345f);
-        p3.transform.position = new Vector2(-4, -0.345f);
-        p4.transform.position = new Vector2(4, -0.345f);
+        p1.transform.position = new Vector2(-4f, -0.345f);
+        p2.transform.position = new Vector2(4f, -0.345f);
+        p3.transform.position = new Vector2(-7.5f, -0.345f);
+        p4.transform.position = new Vector2(7.5f, -0.345f);
+        r=Random.Range(0.0f,1.0f);
+        b=Random.Range(-0.5f,0.5f);
 
     }
 
@@ -49,12 +61,12 @@ public class BallMovement : MonoBehaviour
 
         if(player1Start == true)
         {
-            MoveBall(new Vector2(-1, 0));
+            MoveBall(new Vector2(-r, b));
         }
 
         else
         {
-            MoveBall(new Vector2(1, 0));
+            MoveBall(new Vector2(r, b));
         }
 
     
@@ -64,7 +76,7 @@ public class BallMovement : MonoBehaviour
     {
         direction = direction.normalized;
 
-        float ballSpeed = startSpeed + hitCounter * extraSpeed;
+        ballSpeed = startSpeed + hitCounter * extraSpeed;
 
         ball.velocity = direction * ballSpeed;
     }

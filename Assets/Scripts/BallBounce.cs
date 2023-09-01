@@ -7,9 +7,14 @@ public class BallBounce : MonoBehaviour
 
     public GameObject hitSFX;
 
+    private Rigidbody2D rb;
     public BallMovement ballMovement;
     public Score_Manager scoreManager;
 
+    void Start()
+    {
+        rb=GetComponent<Rigidbody2D>();
+    }
     public void Bounce(Collision2D collision)
     {
         Vector3 ballPosition = transform.position;
@@ -58,5 +63,13 @@ public class BallBounce : MonoBehaviour
         }
 
         Instantiate(hitSFX, transform.position, transform.rotation);
+    }
+    void Update()
+    {
+        if(rb.velocity.sqrMagnitude>9)
+        {
+            Vector2 vec=rb.velocity.normalized;
+            rb.velocity=vec*9;
+        }
     }
 }

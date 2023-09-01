@@ -9,6 +9,27 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Player Number.unity
+    guid: 1abb499d228f84847a025fcf85a4e63e
+  - enabled: 1
+    path: Assets/Scenes/Game Type.unity
+    guid: 8972e74cb3dd26643b7115c787fe6b84
+  - enabled: 1
+    path: Assets/Scenes/Difficulty.unity
+    guid: b4fba3435080bcb42b70d69202de9f9f
+  - enabled: 1
+    path: Assets/Scenes/Colour 1p a.unity
+    guid: a4726af110f3a0e4689c9a6417632c70
+  - enabled: 1
+    path: Assets/Scenes/Colour 1p,f.unity
+    guid: 3b56a85f895cfdb42a34a4eb12367c39
+  - enabled: 1
+    path: Assets/Scenes/Colour 2p 1.unity
+    guid: 9d84c3e9afb16d347bd3c59d43c37b11
+  - enabled: 1
+    path: Assets/Scenes/Colour 2p 2.unity
+    guid: e52037430c75daf4ab8719c134b543d5
+  - enabled: 1
     path: Assets/Scenes/Blitz Ball.unity
     guid: 74691a2f424de4b439f59f822e1cc1d7
   - enabled: 1
@@ -18,15 +39,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Over 2.unity
     guid: 12fb53b4c7e87f944a1e5230aaf7c56f
   - enabled: 1
-    path: Assets/Scenes/Game Menu.unity
-    guid: 1abb499d228f84847a025fcf85a4e63e
-  - enabled: 1
-    path: Assets/Scenes/Difficulty.unity
-    guid: b4fba3435080bcb42b70d69202de9f9f
-  - enabled: 1
-    path: Assets/Scenes/game Type.unity
-    guid: 9d827bec30a5b4e44b73fa174496281c
-  - enabled: 1
-    path: Assets/Scenes/Colour.unity
-    guid: b0846403b1ba105419e64a8c00020c47
+    path: Assets/Scenes/Game Over tie.unity
+    guid: 706ee399c262962418ccb64ff005c6e5
   m_configObjects: {}

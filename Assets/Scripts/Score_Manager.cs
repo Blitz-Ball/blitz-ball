@@ -9,16 +9,26 @@ public class Score_Manager : MonoBehaviour
 {
 
     public int scoreToReach;
-   
+    public Timemanager timer;
+
     
  
 
-    public int player1score = 0;
-    public int player2score = 0;
+    private int player1score = 0;
+    private int player2score = 0;
 
    
     public Text player1ScoreText;
     public Text player2ScoreText;
+
+    void FixedUpdate()
+    {
+        if(timer.timer==0)
+        {
+            CheckScore();
+            return;
+        }
+    }
 
     public void Player1Goal()
     {
@@ -39,16 +49,38 @@ public class Score_Manager : MonoBehaviour
 
     public void CheckScore()
     {
+        
         if(player1score == scoreToReach)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(9);
 
         }
 
         else if(player2score == scoreToReach)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(10);
 
+        }
+        else if(timer.timer<=0)
+        {
+            if(player1score>player2score)
+            {
+                
+                SceneManager.LoadScene(9);
+
+            }
+
+            else if(player2score>player1score)
+            {
+                
+                SceneManager.LoadScene(10);
+
+            }
+            else 
+            {
+                
+                SceneManager.LoadScene(10);
+            }
         }
 
 
