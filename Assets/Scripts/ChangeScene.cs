@@ -19,13 +19,13 @@ public class ChangeScene : MonoBehaviour
     public void Friend(int sceneID)
     {
         Singleton.Instance.IsPlayerFriend=true;
-        Singleton.Instance.IsFriendTrue=true;
         SceneManager.LoadScene(sceneID);
     }
     public void Foe(int sceneID)
     {
+        Singleton.Instance.dif2=false;
+        Singleton.Instance.dif1=true;
         Singleton.Instance.IsPlayerFriend=false;
-        Singleton.Instance.IsFriendTrue=false;
         SceneManager.LoadScene(sceneID);
     }
     public void Red(int sceneID)
@@ -56,19 +56,19 @@ public class ChangeScene : MonoBehaviour
     }
     public void Hard(int sceneID)
     {
-        Singleton.Instance.dif1=true;
-        Singleton.Instance.dif2=false;
+        Singleton.Instance.dif1=false;
+        Singleton.Instance.dif2=true;
         SceneManager.LoadScene(sceneID);
     }
     public void Extreme(int sceneID)
     {
         Singleton.Instance.dif1=false;
-        Singleton.Instance.dif2=true;
+        Singleton.Instance.dif2=false;
         SceneManager.LoadScene(sceneID);
     }
     public void Medium(int sceneID)
     {
-        Singleton.Instance.dif1=false;
+        Singleton.Instance.dif1=true;
         Singleton.Instance.dif2=false;
         SceneManager.LoadScene(sceneID);
     }
@@ -109,6 +109,13 @@ public class ChangeScene : MonoBehaviour
         Singleton.Instance.colp2=Color.yellow;
         SceneManager.LoadScene(sceneID);
     }
+    public void Menu(int sceneID)
+    {
+        Singleton.Instance.dif2=false;
+        Singleton.Instance.dif1=true;
+        SceneManager.LoadScene(sceneID);
+    }
+
     public void Quit()
     {
         Application.Quit();

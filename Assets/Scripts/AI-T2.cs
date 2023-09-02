@@ -20,23 +20,9 @@ public class AI : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position,target.position,speed*Time.deltaTime);
         newposition=transform.position;
-        newposition.y=Mathf.Clamp(newposition.y,-2,2);
-        newposition.x=Mathf.Clamp(newposition.x,7.5f,10f);
+        newposition.y=Mathf.Clamp(newposition.y,-2.345f,1.665f);
+        newposition.x=Mathf.Clamp(newposition.x,6.5f,8f);
         transform.position=newposition;
         
-        
-        
-        /*if (rb.transform.position.x < 6.5f)
-        {
-            rb.transform.position = new Vector2(6.51f, rb.transform.position.y);
-        }
-        if (rb.transform.position.y <- 2f)
-        {
-            rb.transform.position = new Vector2(rb.transform.position.x,-1.99f);
-        }
-        if (rb.transform.position.y > 2f)
-        {
-            rb.transform.position = new Vector2(rb.transform.position.x,1.99);
-        }*/
     }
 }

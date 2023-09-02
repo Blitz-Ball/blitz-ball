@@ -8,6 +8,7 @@ public class AIT1 : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     private Transform target;
+    Vector2 newposition;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +20,10 @@ public class AIT1 : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position,target.position,speed*Time.deltaTime);
-        if (rb.transform.position.x >- 6.5f)
-        {
-            rb.transform.position = new Vector2(-6.51f, rb.transform.position.y);
-        }
-        if (rb.transform.position.y <- 2f)
-        {
-            rb.transform.position = new Vector2(rb.transform.position.x,-1.99f);
-        }
-        if (rb.transform.position.y > 2f)
-        {
-            rb.transform.position = new Vector2(rb.transform.position.x,1.99f);
-        }
+        newposition=transform.position;
+        newposition.y=Mathf.Clamp(newposition.y,-2.345f,1.665f);
+        newposition.x=Mathf.Clamp(newposition.x,-8f,-6.5f);
+        transform.position=newposition;
+
     }
 }

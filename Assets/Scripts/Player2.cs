@@ -9,6 +9,7 @@ public class Player2 : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 racketDirection;
+    Vector2 newposition;
 
     // Start is called before the first frame update
     void Start()
@@ -33,10 +34,11 @@ public class Player2 : MonoBehaviour
         racketDirection = new Vector2(directionX, directionY).normalized;
         rb.velocity = new Vector2(directionX * RacketSpeed, directionY * RacketSpeed);
 
-        if (rb.transform.position.x <= 0.85f)
-        {
-            rb.transform.position = new Vector2(0.85f, rb.transform.position.y);
-        }
+        newposition=transform.position;
+        newposition.y=Mathf.Clamp(newposition.y,-4.2f,3.565f);
+        newposition.x=Mathf.Clamp(newposition.x,0.8f,8f);
+        transform.position=newposition;
+
 
     }
 

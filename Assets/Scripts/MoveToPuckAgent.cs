@@ -7,7 +7,7 @@ using Unity.MLAgents.Sensors;
 
 public class MoveToPuckAgent : Agent
 {
-
+ 
     [SerializeField] private Transform targetTransform;
 
     public override void OnEpisodeBegin()

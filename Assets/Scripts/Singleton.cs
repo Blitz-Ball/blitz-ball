@@ -9,7 +9,6 @@ public class Singleton : MonoBehaviour
         public int SceneID;
         public bool IsPlayer1;
         public bool IsPlayerFriend;
-        public bool IsFriendTrue;
         public Color colp1;
         public Color colp2;
         public bool dif1;
@@ -33,14 +32,4 @@ public class Singleton : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

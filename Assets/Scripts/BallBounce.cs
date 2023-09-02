@@ -10,6 +10,7 @@ public class BallBounce : MonoBehaviour
     private Rigidbody2D rb;
     public BallMovement ballMovement;
     public Score_Manager scoreManager;
+    public float Maxball=15;
 
     void Start()
     {
@@ -66,10 +67,10 @@ public class BallBounce : MonoBehaviour
     }
     void Update()
     {
-        if(rb.velocity.sqrMagnitude>9)
+        if(rb.velocity.sqrMagnitude>Maxball)
         {
             Vector2 vec=rb.velocity.normalized;
-            rb.velocity=vec*9;
+            rb.velocity=vec*Maxball;
         }
     }
 }
